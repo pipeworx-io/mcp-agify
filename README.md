@@ -1,34 +1,54 @@
-# @pipeworx/mcp-agify
+# mcp-agify
 
-MCP server for [Agify.io](https://agify.io) — predict a person's age from their first name, with optional country-specific calibration. Free, no auth required.
+Agify MCP — age prediction from first name (agify.io, free, no auth)
+
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `predict_age` | Predict age based on a first name (global data) |
-| `predict_age_country` | Predict age calibrated to a specific country |
 
 ## Quick Start
 
-Add to your MCP client config:
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 
 ```json
 {
   "mcpServers": {
     "agify": {
-      "type": "url",
-      "url": "https://gateway.pipeworx.io/agify"
+      "url": "https://gateway.pipeworx.io/agify/mcp"
     }
   }
 }
 ```
 
-## CLI Usage
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
 
-```bash
-npx @anthropic-ai/mcp-client https://gateway.pipeworx.io/agify
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
 ```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Agify data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
