@@ -1,0 +1,39 @@
+[
+  {
+    "name": "predict_age",
+    "description": "Estimate someone's age from their first name using global statistics. Returns predicted age and confidence count based on name frequency data.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "First name to predict age for."
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "predict_age_country",
+    "description": "Estimate someone's age from their first name within a specific country (e.g., 'US', 'FR', 'JP'). Returns predicted age and regional confidence count.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "First name to predict age for."
+        },
+        "country_code": {
+          "type": "string",
+          "description": "ISO 3166-1 alpha-2 country code (e.g. \"US\", \"GB\", \"DE\") to localize the prediction."
+        }
+      },
+      "required": [
+        "name",
+        "country_code"
+      ]
+    }
+  }
+]
