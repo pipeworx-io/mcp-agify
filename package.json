@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-agify",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Agify MCP — age prediction from first name (agify.io, free, no auth)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "agify",
     "gatewaySlug": "agify",
-    "sourceHash": "v1-32cd8904b4b9da2f4c32bd226a98709113b24be172783ab101e69cdc3a1d5367",
-    "sourceCommit": "c6136b81713e72ccb22977ca0c0cd981f8c3f081"
+    "sourceHash": "v1-63997fddde10399a049913536c8043e0e3d239e31037a0be2dd841a2e0d18abe",
+    "sourceCommit": "aef970216f5309cdd22a27ddfc275e472aaadac1"
   }
 }
